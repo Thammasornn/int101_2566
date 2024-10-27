@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title >Title</title> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head >
+<body>
+
+  <div class="container m4 p4" >
+    <div class="row">
+      <div class="col-1">customerNumber</div>
+      <div class="col-1">customerName</div>
+      <div class="col-1">contactLastName</div>
+      <div class="col-1">contactFirstName</div>
+      <div class="col-1">phone</div>
+      <div class="col-1">addressLine1</div>
+      <div class="col-1">addressLine2</div>
+      <div class="col-1">city</div>
+      <div class="col-1">state</div>
+      <div class="col-1">postalCode</div>
+      <div class="col-1">country</div>
+      <div class="col-1">salesRepEmployeeNumber</div>
+      <div class="col-1">creditLimit</div>
+    </div>
+    <div class="row" th:each=" Kaew : ${customers}">
+      <div class="col-1" th:text="${Kaew.id}"></div>
+      <div class="col-1" th:text="${Kaew.customerName}"></div>
+      <div class="col-1" th:text="${Kaew.contactLastName}"></div>
+      <div class="col-1" th:text="${Kaew.contactFirstName}"></div>
+      <div class="col-1" th:text="${Kaew.phone}"></div>
+      <div class="col-1" th:text="${Kaew.addressLine1}"></div>
+      <div class="col-1" th:text="${Kaew.addressLine2}"></div>
+      <div class="col-1" th:text="${Kaew.city}"></div>
+      <div class="col-1" th:text="${Kaew.state}"></div>
+      <div class="col-1" th:text="${Kaew.postalCode}"></div>
+      <div class="col-1" th:text="${Kaew.country}"></div>
+      <div class="col-1" th:text="${Kaew.salesRepEmployeeNumber}"></div>
+      <div class="col-1" th:text="${Kaew.creditLimit}"></div>
+    </div>
+  </div>
+</body>
+</html>
